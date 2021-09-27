@@ -1,0 +1,12 @@
+1)SELECT P.ProductName,C.CategoryName
+From Suppliers S,Products P,Categories C
+WHERE S.SupplierName='leka Trading' 
+AND P.CategoryID=C.CategoryID 
+AND P.SupplierID=S.SupplierID;
+
+
+
+2)SELECT O.ProductID, MIN(O.Quantity) as 'min quantity',P.ProductName
+FROM OrderDetails O
+INNER JOIN Products P
+ON O.ProductID=P.ProductID;
